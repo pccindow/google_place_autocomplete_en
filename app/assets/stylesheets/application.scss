@@ -1,0 +1,27 @@
+@import "materialize"; 
+@import "materialize/components/color-variables";
+$primary-color: color("blue", "lighten-2") !default;
+$secondary-color: color("yellow", "base") !default;
+@import 'materialize';
+
+.flexbox {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;   
+   .actions {
+      text-align: center;
+      margin-top: 20px;
+   }
+}
+
+.flexbox {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;   
+   .actions {
+      text-align: center;
+      margin-top: 20px;
+   }
+} 

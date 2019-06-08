@@ -11,42 +11,44 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+<div class="field">
+ <%= form.label 'Adress' %>
+ <%= form.text_field :address, placeholder: "Enter your adress", id: :autocomplete_address %>
+</div>
 
-  <div class="field">
-    <%= form.label :street_number %>
-    <%= form.number_field :street_number %>
-  </div>
+<div class="field">
+ <%= form.label 'Channel number' %>
+ <%= form.number_field :street_number, id: :street_number %>
+</div>
 
-  <div class="field">
-    <%= form.label :locality %>
-    <%= form.text_field :locality %>
-  </div>
+<div class="field">
+ <%= form.label 'Town' %>
+ <%= form.text_field :locality, id: :locality %>
+</div>
+ 
+<div class="field">
+ <%= form.label 'Name of the channel' %>
+ <%= form.text_field :route, id: :route %>
+</div>
 
-  <div class="field">
-    <%= form.label :route %>
-    <%= form.text_field :route %>
-  </div>
+<div class="field">
+ <%= form.label 'Area' %>
+ <%= form.text_field :administrative_area_level_1, id: :administrative_area_level_1 %>
+</div>
 
-  <div class="field">
-    <%= form.label :administrative_area_level_1 %>
-    <%= form.text_field :administrative_area_level_1 %>
-  </div>
+<div class="field">
+ <%= form.label 'Country' %>
+ <%= form.text_field :country, id: :country %>
+</div>
 
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country %>
-  </div>
+<div class="field">
+ <%= form.label 'Postal code' %>
+ <%= form.number_field :postal_code, id: :postal_code %>
+</div>
 
-  <div class="field">
-    <%= form.label :postal_code %>
-    <%= form.number_field :postal_code %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="actions">
+ <div class="btn waves-effect waves-light">
+  <%= form.submit "submit" %>
+ </div>
+</div>
 <% end %>
