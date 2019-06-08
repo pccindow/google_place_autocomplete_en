@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Autocompletes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Street number</th>
+      <th>Locality</th>
+      <th>Route</th>
+      <th>Administrative area level 1</th>
+      <th>Country</th>
+      <th>Postal code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @autocompletes.each do |autocomplete| %>
+      <tr>
+        <td><%= autocomplete.address %></td>
+        <td><%= autocomplete.street_number %></td>
+        <td><%= autocomplete.locality %></td>
+        <td><%= autocomplete.route %></td>
+        <td><%= autocomplete.administrative_area_level_1 %></td>
+        <td><%= autocomplete.country %></td>
+        <td><%= autocomplete.postal_code %></td>
+        <td><%= link_to 'Show', autocomplete %></td>
+        <td><%= link_to 'Edit', edit_autocomplete_path(autocomplete) %></td>
+        <td><%= link_to 'Destroy', autocomplete, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Autocomplete', new_autocomplete_path %>
